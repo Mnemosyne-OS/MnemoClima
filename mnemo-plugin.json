@@ -1,0 +1,483 @@
+{
+  "name": "@mnemosyne-plugins/mnemo-clima",
+  "displayName": "MnemoClima",
+  "version": "0.1.0",
+  "category": "Memory",
+  "icon": "icon.svg",
+  "vendor": "Mnemosyne Labs",
+  "license": "MIT",
+  "description": "The world's climate on a map and a timeline you can move. NOAA's opinion on El Niño and La Niña with its date, the ocean index since 1950, the heat in the ocean, the disasters in progress and their history, the continents' averages, and month by month what happened at the place you declare during the El Niño years that looked like this one. Markers for places that react early or pay later, and the coffee regions. Read from NOAA, NASA, GDACS, USGS and FEWS NET; nothing here is a forecast of ours.",
+  "descriptionI18n": {
+    "en": "The world's climate on a map and a timeline you can move. NOAA's opinion on El Niño and La Niña with its date, the ocean index since 1950, the heat in the ocean, the disasters in progress and their history, the continents' averages, and month by month what happened at the place you declare during the El Niño years that looked like this one. Markers for places that react early or pay later, and the coffee regions. Read from NOAA, NASA, GDACS, USGS and FEWS NET; nothing here is a forecast of ours.",
+    "fr": "Le climat du monde sur une carte et une frise qu'on fait bouger. L'avis de la NOAA sur El Niño et La Niña avec sa date, l'indice de l'océan depuis 1950, la chaleur de l'océan, les catastrophes en cours et leur historique, les moyennes des continents, et mois par mois ce qui s'est passé au lieu que tu déclares pendant les années El Niño qui ressemblaient à celle-ci. Des marqueurs pour les lieux qui réagissent tôt ou paient plus tard, et les régions du café. Lu chez la NOAA, la NASA, GDACS, l'USGS et FEWS NET ; rien ici n'est une prévision maison.",
+    "es": "El clima del mundo en un mapa y una línea de tiempo que se mueven. La opinión de la NOAA sobre El Niño y La Niña con su fecha, el índice del océano desde 1950, el calor del océano, los desastres en curso y su historial, los promedios de los continentes, y mes a mes lo que pasó en el lugar que declaras durante los años de El Niño que se parecían a este. Marcadores para los lugares que reaccionan pronto o lo pagan después, y las regiones del café. Leído de la NOAA, la NASA, GDACS, el USGS y FEWS NET; nada aquí es una previsión nuestra.",
+    "de": "Das Klima der Welt auf einer Karte und einer Zeitleiste, die sich bewegen. Die Einschätzung der NOAA zu El Niño und La Niña mit Datum, der Ozeanindex seit 1950, die Wärme im Ozean, laufende Katastrophen und ihre Geschichte, die Mittelwerte der Kontinente, und Monat für Monat, was an deinem Ort in den El-Niño-Jahren geschah, die diesem ähnelten. Marker für Orte, die früh reagieren oder später zahlen, und die Kaffeeregionen. Gelesen bei NOAA, NASA, GDACS, USGS und FEWS NET; nichts hier ist eine eigene Vorhersage.",
+    "pt": "O clima do mundo num mapa e numa linha do tempo que se movem. A opinião da NOAA sobre El Niño e La Niña com a data, o índice do oceano desde 1950, o calor do oceano, os desastres em curso e o seu histórico, as médias dos continentes, e mês a mês o que aconteceu no lugar que você declara nos anos de El Niño parecidos com este. Marcadores para lugares que reagem cedo ou pagam depois, e as regiões do café. Lido na NOAA, NASA, GDACS, USGS e FEWS NET; nada aqui é uma previsão nossa.",
+    "ru": "Климат мира на карте и шкале времени, которые можно двигать. Оценка NOAA по Эль-Ниньо и Ла-Нинья с датой, индекс океана с 1950 года, тепло океана, текущие бедствия и их история, средние по континентам и по месяцам — что происходило в указанном вами месте в похожие годы Эль-Ниньо. Метки для мест, которые реагируют рано или расплачиваются позже, и кофейные регионы. Данные NOAA, NASA, GDACS, USGS и FEWS NET; здесь нет наших собственных прогнозов.",
+    "zh": "在可移动的地图和时间轴上看世界气候。NOAA 对厄尔尼诺和拉尼娜的判断及日期、1950 年以来的海洋指数、海洋热量、进行中的灾害及其历史、各大陆的平均值，以及你所声明地点在相似厄尔尼诺年份里逐月发生了什么。为提前反应或随后受影响的地点设置标记，并包括咖啡产区。数据来自 NOAA、NASA、GDACS、USGS 和 FEWS NET；这里没有我们自己的预测。"
+  },
+  "keywords": [
+    "climate",
+    "el nino",
+    "la nina",
+    "ocean",
+    "disasters",
+    "drought",
+    "harvest",
+    "map",
+    "timeline"
+  ],
+  "permissions": [
+    "vault:read",
+    "vault:write",
+    "cockpit:pin",
+    "watch:background",
+    "dialog:open"
+  ],
+  "repository": "https://github.com/Mnemosyne-OS/MnemoClima",
+  "updateStrategy": "git",
+  "entrypoints": {
+    "renderer": "index.html"
+  },
+  "boards": [
+    {
+      "id": "exploded",
+      "name": "Exploded view",
+      "nameI18n": {
+        "fr": "Vue éclatée",
+        "es": "Vista separada",
+        "de": "Explosionsansicht",
+        "pt": "Vista explodida",
+        "ru": "Раздельный вид",
+        "zh": "分屏视图"
+      },
+      "zoom": 0.8,
+      "windows": [
+        {
+          "id": "mnemo-clima-map",
+          "x": 0,
+          "y": 0,
+          "w": 0.64,
+          "h": 0.62
+        },
+        {
+          "id": "mnemo-clima-timeline",
+          "x": 0,
+          "y": 0.62,
+          "w": 0.64,
+          "h": 0.38
+        },
+        {
+          "id": "mnemo-clima-panel",
+          "x": 0.64,
+          "y": 0,
+          "w": 0.36,
+          "h": 1
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "id": "mnemo-clima-main",
+      "icon": "🌊",
+      "name": "MnemoClima",
+      "route": "index.html",
+      "defaultWidth": 1280,
+      "defaultHeight": 860
+    },
+    {
+      "id": "mnemo-clima-map",
+      "icon": "🗺️",
+      "name": "MnemoClima · Map",
+      "route": "index.html",
+      "defaultWidth": 900,
+      "defaultHeight": 560,
+      "openOnLaunch": false
+    },
+    {
+      "id": "mnemo-clima-timeline",
+      "icon": "📈",
+      "name": "MnemoClima · Timeline",
+      "route": "index.html",
+      "defaultWidth": 900,
+      "defaultHeight": 360,
+      "openOnLaunch": false
+    },
+    {
+      "id": "mnemo-clima-panel",
+      "icon": "🌊",
+      "name": "MnemoClima · Panel",
+      "route": "index.html",
+      "defaultWidth": 460,
+      "defaultHeight": 860,
+      "openOnLaunch": false
+    }
+  ],
+  "agentGuide": [
+    "Name a place, a marker, an episode, a disaster or a curve the way the person says it (« Caracas », « El Niño 1997 », « cyclone Mexique »): the app finds it by its words. Several matches are refused with their names (AMBIGUOUS): pick one and call again; NO_… lists the names that exist.",
+    "To look: goToMonth for a month or a year, showEpisode for an El Niño or La Niña, zoomTimeline to zoom, showTab for a tab, showHazard for a disaster, selectPlace for a place, setMapView for the globe.",
+    "The analogue years (what happened at a place in past El Niño years like this one) are in the Place tab: selectPlace, then setAnalogStrength; episodes lists them.",
+    "Nothing here is a forecast: the future is NOAA's opinion with its date (status). Say it as NOAA's, never as the app's.",
+    "The map has no country zoom: to show a country, name a disaster, a marker or a place there."
+  ],
+  "agentActions": [
+    {
+      "id": "status",
+      "summary": "Read NOAA's El Niño status with its date, the latest ocean index, the month shown, the places, markers and layers",
+      "details": "noaa is NOAA's own words and date, never a forecast of ours; unread says why it could not be read. settingsReady false means changes cannot be saved yet.",
+      "effect": "read"
+    },
+    {
+      "id": "hazards",
+      "summary": "List the disasters in progress (cyclones, floods, droughts, earthquakes, fires…) as the Disasters tab does",
+      "details": "Read from GDACS, NASA EONET and USGS. Answers the total and at most limit rows.",
+      "effect": "read",
+      "params": {
+        "kind": {
+          "type": "string",
+          "description": "One type of disaster, or all",
+          "enum": [
+            "all",
+            "cyclone",
+            "flood",
+            "drought",
+            "quake",
+            "volcano",
+            "fire",
+            "storm",
+            "ice",
+            "other"
+          ]
+        },
+        "limit": {
+          "type": "number",
+          "description": "How many to answer, 1 to 200 (50 by default)",
+          "minimum": 1,
+          "maximum": 200
+        }
+      }
+    },
+    {
+      "id": "goToMonth",
+      "summary": "Move the timeline to a month (keeping its zoom): the map shows that month's ocean heat and disasters",
+      "details": "The timeline runs from 1850 to the month under way. Without month, the middle of the year.",
+      "effect": "write",
+      "params": {
+        "year": {
+          "type": "number",
+          "description": "The year",
+          "minimum": 1850,
+          "maximum": 2200
+        },
+        "month": {
+          "type": "number",
+          "description": "The month, 1 to 12",
+          "minimum": 1,
+          "maximum": 12
+        }
+      },
+      "required": [
+        "year"
+      ]
+    },
+    {
+      "id": "showTab",
+      "summary": "Open a tab of the panel: Pacific, Averages, Place, Markers, Disasters or Memory",
+      "effect": "write",
+      "params": {
+        "tab": {
+          "type": "string",
+          "description": "The tab",
+          "enum": [
+            "pacific",
+            "averages",
+            "place",
+            "markers",
+            "hazards",
+            "memory"
+          ]
+        }
+      },
+      "required": [
+        "tab"
+      ]
+    },
+    {
+      "id": "setLayers",
+      "summary": "Turn the map's layers on or off, as the Layers menu does, and keep the choice",
+      "details": "Only the layers given change. Answers once the choice is saved.",
+      "effect": "write",
+      "params": {
+        "sst": {
+          "type": "boolean",
+          "description": "Ocean surface temperature"
+        },
+        "land": {
+          "type": "boolean",
+          "description": "Land temperature"
+        },
+        "hazards": {
+          "type": "boolean",
+          "description": "Disasters"
+        },
+        "tracks": {
+          "type": "boolean",
+          "description": "Cyclone tracks"
+        },
+        "markers": {
+          "type": "boolean",
+          "description": "Markers"
+        },
+        "places": {
+          "type": "boolean",
+          "description": "Declared places"
+        }
+      }
+    },
+    {
+      "id": "selectPlace",
+      "summary": "Show a declared place: its rain and the El Niño years that looked like this one",
+      "effect": "write",
+      "params": {
+        "place": {
+          "type": "string",
+          "description": "The place as the person says it (« Caracas ») or its id",
+          "maxLength": 80
+        }
+      },
+      "required": [
+        "place"
+      ]
+    },
+    {
+      "id": "addPlace",
+      "summary": "Declare a place with a name and coordinates, as the Places form does, and keep it",
+      "details": "12 places at most. Nothing is geocoded: give the coordinates. Answers once the place is saved, then shows it.",
+      "effect": "write",
+      "params": {
+        "name": {
+          "type": "string",
+          "description": "What to call the place",
+          "maxLength": 60
+        },
+        "latitude": {
+          "type": "number",
+          "description": "Degrees north",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "description": "Degrees east",
+          "minimum": -180,
+          "maximum": 180
+        }
+      },
+      "required": [
+        "name",
+        "latitude",
+        "longitude"
+      ]
+    },
+    {
+      "id": "showMarker",
+      "summary": "Show or hide a marker (a place that reacts early to El Niño, or pays later), as its switch does",
+      "effect": "write",
+      "params": {
+        "marker": {
+          "type": "string",
+          "description": "The marker as the person says it (« Californie », « café Huila ») or its id",
+          "maxLength": 80
+        },
+        "on": {
+          "type": "boolean",
+          "description": "true to show it, false to hide it"
+        }
+      },
+      "required": [
+        "marker",
+        "on"
+      ]
+    },
+    {
+      "id": "setHazardKind",
+      "summary": "Show only one type of disaster on the map and in the Disasters tab, or all of them",
+      "effect": "write",
+      "params": {
+        "kind": {
+          "type": "string",
+          "description": "The type of disaster",
+          "enum": [
+            "all",
+            "cyclone",
+            "flood",
+            "drought",
+            "quake",
+            "volcano",
+            "fire",
+            "storm",
+            "ice",
+            "other"
+          ]
+        }
+      },
+      "required": [
+        "kind"
+      ]
+    },
+    {
+      "id": "episodes",
+      "summary": "List the El Niño and La Niña episodes the ocean index (ONI) defines, with their peak, and which are the analogue years the Place tab compares",
+      "details": "Measured episodes only, never a forecast. analogue: a finished El Niño peaking at the strength chosen in the Place tab (strong 1.5 or veryStrong 2.0), since 1981.",
+      "effect": "read",
+      "params": {
+        "kind": {
+          "type": "string",
+          "description": "elnino, lanina or all",
+          "enum": [
+            "all",
+            "elnino",
+            "lanina"
+          ]
+        }
+      }
+    },
+    {
+      "id": "showEpisode",
+      "summary": "Show an El Niño or La Niña episode on the timeline: the whole episode in view, the map on its middle month",
+      "effect": "write",
+      "params": {
+        "episode": {
+          "type": "string",
+          "description": "As the person says it: « El Niño 1997 », « La Niña 2010 », « El Niño en cours », or its id from episodes",
+          "maxLength": 80
+        }
+      },
+      "required": [
+        "episode"
+      ]
+    },
+    {
+      "id": "zoomTimeline",
+      "summary": "Zoom the timeline as its buttons do: in, out, all (1950 to now), now (this year), or a span in years around the month shown",
+      "effect": "write",
+      "params": {
+        "zoom": {
+          "type": "string",
+          "description": "in, out, all or now",
+          "enum": [
+            "in",
+            "out",
+            "all",
+            "now"
+          ]
+        },
+        "years": {
+          "type": "number",
+          "description": "How many years to show around the month shown, 1 to 180",
+          "minimum": 1,
+          "maximum": 180
+        }
+      }
+    },
+    {
+      "id": "showHazard",
+      "summary": "Show one disaster in progress: its type chosen, the Disasters tab, and the timeline on its first month so the map draws it",
+      "effect": "write",
+      "params": {
+        "disaster": {
+          "type": "string",
+          "description": "As the person says it (its name, its country or its type: « cyclone Mexique », « séisme Japon ») or its id from hazards",
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "disaster"
+      ]
+    },
+    {
+      "id": "setMapView",
+      "summary": "Draw the map as a globe or flat, as the Layers menu's view does",
+      "effect": "write",
+      "params": {
+        "view": {
+          "type": "string",
+          "description": "flat or globe",
+          "enum": [
+            "flat",
+            "globe"
+          ]
+        }
+      },
+      "required": [
+        "view"
+      ]
+    },
+    {
+      "id": "showCurve",
+      "summary": "Show or hide a curve of the timeline (ONI, PDO, a continent, a place's rain…), as the Curves menu's switch does, and keep the choice",
+      "details": "Answers once the choice is saved.",
+      "effect": "write",
+      "params": {
+        "curve": {
+          "type": "string",
+          "description": "The curve as the person says it (« Afrique », « PDO », « pluie Caracas ») or its id from status",
+          "maxLength": 80
+        },
+        "on": {
+          "type": "boolean",
+          "description": "true to show it, false to hide it"
+        }
+      },
+      "required": [
+        "curve",
+        "on"
+      ]
+    },
+    {
+      "id": "setAnalogStrength",
+      "summary": "Choose which past El Niño years the Place tab compares: strong ones (peak 1.5 °C or more) or very strong ones (2.0 or more), and keep it",
+      "effect": "write",
+      "params": {
+        "strength": {
+          "type": "string",
+          "description": "strong or veryStrong",
+          "enum": [
+            "strong",
+            "veryStrong"
+          ]
+        }
+      },
+      "required": [
+        "strength"
+      ]
+    }
+  ],
+  "voiceCommands": {
+    "fr": [
+      "montre l’El Niño de 1997",
+      "zoome sur la frise",
+      "montre le cyclone au Mexique",
+      "affiche la carte en globe",
+      "affiche la courbe de l’Afrique",
+      "va en décembre 1997"
+    ],
+    "en": [
+      "show the 1997 El Niño",
+      "zoom in on the timeline",
+      "show the cyclone in Mexico",
+      "show the map as a globe",
+      "show Africa’s curve",
+      "go to December 1997"
+    ],
+    "es": [
+      "muestra El Niño de 1997",
+      "haz zoom en la línea de tiempo",
+      "muestra el ciclón en México",
+      "muestra el mapa como globo",
+      "muestra la curva de África",
+      "ve a diciembre de 1997"
+    ]
+  }
+}
