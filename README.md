@@ -10,6 +10,10 @@
 
 The world's climate on a map and a timeline you can move, inside Mnemosyne OS.
 
+[![MnemoClima running on Hugging Face](https://huggingface.co/spaces/Mnemosyne-OS/mnemoclima/resolve/main/thumbnail.png)](https://huggingface.co/spaces/Mnemosyne-OS/mnemoclima)
+
+**[▶ Try it in your browser, on Hugging Face](https://huggingface.co/spaces/Mnemosyne-OS/mnemoclima)**: nothing to install. There, six of its sources are a saved copy, because they cannot be read from a web page; inside Mnemosyne OS every source is read live, and the numbers go into your memory.
+
 - **The Pacific.** NOAA's opinion on El Niño and La Niña, with its date and its words, and the
   ocean index (ONI) since 1950.
 - **The heat in the ocean.** Sea surface temperature against normal (NOAA OISST), on a flat map
