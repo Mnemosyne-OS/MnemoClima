@@ -38,6 +38,8 @@ NOAA Climate Prediction Center, NOAA Physical Sciences Laboratory, NASA GISTEMP,
 IBTrACS, FEWS NET, Natural Earth. The data are read from the sources by the person's machine and
 are not shipped with the cartridge (apart from Natural Earth's country shapes, public domain).
 
+The MIT licence in `LICENSE` covers the code. The data keeps the terms of its sources.
+
 ## Develop
 
 ```bash
